@@ -124,5 +124,3 @@ if st.session_state.logged_in_email:
             if next_page_token:
                 if st.button("Next Page"):
                     st.session_state.page_token = next_page_token
-            else:
-                st.info("No more emails to show.")  # End of inbox
