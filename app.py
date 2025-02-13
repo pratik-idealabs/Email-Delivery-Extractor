@@ -36,7 +36,7 @@ def authenticate_user():
             # Load client secrets from Streamlit secrets manager
             client_secret_json = json.loads(st.secrets["google_api"]["client_secret"])
             flow = InstalledAppFlow.from_client_config(client_secret_json, SCOPES)
-            creds = flow.run_local_server(port=0)
+            creds = flow.run_console()
 
         # Save the credentials for future sessions
         with open("token.pickle", "wb") as token:
